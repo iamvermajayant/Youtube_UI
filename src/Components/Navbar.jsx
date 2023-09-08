@@ -5,16 +5,29 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 const Container = styled.div`
   position : sticky;
   top : 0;
-  background-color : ${({theme}) => theme.bgLighter}
+  background-color : ${({theme}) => theme.bgLighter};
   height : 56px;
 `;
 
 const Wrapper = styled.div`
   display : flex;
   align-items : center;
+  height : 100%;
+  padding : 0px 20px;
+  justify-content : flex-end;
 `;
 
 const Search = styled.div`
+  left : 0px;
+  right : 0px;
+  display : flex;
+  justify-content: space-between;
+  align-items : center;
+  margin : auto; 
+  position : absolute;
+  width : 40%;
+  padding : 5px;
+  border : 1px solid #CCC;
 `;
 
 
@@ -33,6 +46,8 @@ const Button = styled.button`
 `;
 
 const Input = styled.input`
+  border : none;  
+  background-color : transparent;
 `;
 
 const Navbar = () => {
