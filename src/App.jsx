@@ -1,8 +1,11 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Menu from './Components/Menu';
 import Navbar from "./Components/Navbar";
 
+
 import './App.css';
+import { darkTheme, lightTheme } from "./utils/Theme";
+import { useState } from "react";
 
 
 
@@ -13,7 +16,7 @@ const Container = styled.div`
 
 const Main = styled.div`
   flex : 7;
-  background-color : #ddd;
+  background-color : #181818;
 
 `
 
@@ -24,17 +27,91 @@ const Wrapper = styled.div`
 
 function App() {
  
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
     <Container>
-     <Menu/>
+     <Menu darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Main>
         <Navbar/>
         <Wrapper>
-          video cards
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
+          <p>Test</p>
         </Wrapper>
       </Main>
     </Container>
+    </ThemeProvider>
   )
 }
 
