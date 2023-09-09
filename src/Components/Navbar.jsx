@@ -28,6 +28,10 @@ const Search = styled.div`
   width : 40%;
   padding : 5px;
   border : 1px solid #CCC;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 `;
 
 
@@ -42,7 +46,6 @@ const Button = styled.button`
     display : flex;
     align-items : center;
     gap : 5px;
-    margin-top : 0.5rem;
 `;
 
 const Input = styled.input`
