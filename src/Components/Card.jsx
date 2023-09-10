@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -47,17 +49,19 @@ const Info = styled.div`
 
 const Card = () => {
   return (
+    <Link to="/video/test" style={{textDecoration : "none"}}>
     <Container>
       <Image src="https://i.ytimg.com/vi/mZQH8CPQ-wo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfAQkZobpHNdCTehIhLbef0N9thA" />
       <Details>
         <ChannelImage src="https://yt3.ggpht.com/ytc/AOPolaSAz3nhUeo5D7ps5MvLjQsCeqdLlB7Yz-MotQLeJA=s68-c-k-c0x00ffffff-no-rj" />
         <Texts>
-          <Title>With You</Title>
+          <Title>Test Video</Title>
           <ChannelName>A.P Dhillon</ChannelName>
           <Info>660,998 Views ● 1 Day ago</Info>
         </Texts>
       </Details>
     </Container>
+    </Link>
   );
 };
 
