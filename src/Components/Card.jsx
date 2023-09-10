@@ -32,8 +32,8 @@ const Texts = styled.div`
  
 const Title =styled.h1`
   font-size : 16px;
-  font-weight : 500
-  color : ${({theme}) => theme.text}
+  font-weight : 500;
+  color : ${({theme}) => theme.text};
 `;
 
 const ChannelName = styled.h2`
@@ -56,7 +56,7 @@ const Card = () => {
         <Texts>
           <Title>With You</Title>
           <ChannelName>A.P Dhillon</ChannelName>
-          <Info></Info>
+          <Info>660,998 Views ● 1 Day ago</Info>
         </Texts>
       </Details>
     </Container>
