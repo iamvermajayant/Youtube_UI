@@ -1,3 +1,6 @@
+import { ThumbDownAltOutlined, ThumbUpAltOutlined } from "@mui/icons-material";
+import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
+import AddTaskOutlinedIcon from '@mui/icons-material/AddTaskOutlined';
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -11,15 +14,42 @@ const Content = styled.div`
 
 const VideoWrapper = styled.div``;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  font-size : 18px;
+  font-weight : 400;
+  margin-top : 20px;
+  margin-bottom : 10px;
+  color : ${({theme}) => theme.text};
+`;
 
-const Details = styled.div``;
+const Details = styled.div`
+  display : flex;
+  align-items : center;
+  justify-content : space-between;
 
-const Info = styled.span``;
+`;
 
-const Buttons = styled.div``;
+const Info = styled.span`
+  color : ${({theme}) => theme.textSoft};
+`;
 
-const Button = styled.div``;
+const Buttons = styled.div`
+  display : flex;
+  color : ${({theme}) => theme.text};
+  gap : 20px;
+
+`;
+
+const Button = styled.div`
+  display : flex;
+  align-items : center;
+  gap : 5px;
+`;
+
+const Hr = styled.hr`
+  margin : 15px 0px;
+  border : 0.5px solid ${({theme}) => theme.soft};
+`;
 
 const Recommendation = styled.div`
   flex: 2;
@@ -31,8 +61,8 @@ const Video = () => {
       <Content>
       <VideoWrapper>
         <iframe
-          width="560"
-          height="315"
+          width="100%"
+          height="720"
           src="https://www.youtube.com/embed/mZQH8CPQ-wo?si=V6uZw0Ah9ktp3EX7"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -43,7 +73,16 @@ const Video = () => {
       <Title>With You</Title>
       <Details>
         <Info>660,998 Views ● 1 Day ago</Info>
+        <Buttons>
+          <Button>
+            <ThumbUpAltOutlined/> 123
+          </Button>
+          <Button><ThumbDownAltOutlined/>Dislike</Button>
+          <Button><ReplyOutlinedIcon/>Share</Button>
+          <Button><AddTaskOutlinedIcon/>Save</Button>
+        </Buttons>
       </Details>
+      <Hr/>
       </Content>
       <Recommendation>Recommendation</Recommendation>
     </Container>
