@@ -46,6 +46,36 @@ const Button = styled.div`
   gap : 5px;
 `;
 
+const Channel = styled.div`
+  display : flex;
+  justify-content : space-between;
+
+`;
+
+const ChannelInfo = styled.div`
+
+`;
+
+const Subscribe = styled.button`
+
+`;
+
+const Image = styled.img`
+
+`;
+const ChannelDetail = styled.div`
+
+`;
+const ChannelName = styled.span`
+
+`;
+const ChannelCounter = styled.span`
+
+`;
+const Description = styled.p`
+
+`;
+
 const Hr = styled.hr`
   margin : 15px 0px;
   border : 0.5px solid ${({theme}) => theme.soft};
@@ -83,6 +113,12 @@ const Video = () => {
         </Buttons>
       </Details>
       <Hr/>
+      <Channel>
+        <ChannelInfo>
+        
+        </ChannelInfo>
+        <Subscribe>SUBSCRIBE</Subscribe>
+      </Channel>
       </Content>
       <Recommendation>Recommendation</Recommendation>
     </Container>
