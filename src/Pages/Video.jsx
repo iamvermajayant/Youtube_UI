@@ -2,6 +2,7 @@ import { ThumbDownAltOutlined, ThumbUpAltOutlined } from "@mui/icons-material";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
 import styled from "styled-components";
+import Comments from "../Components/Comments";
 
 const Container = styled.div`
   display: flex;
@@ -47,6 +48,7 @@ const Button = styled.div`
 const Channel = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 `;
 
 const ChannelInfo = styled.div`
@@ -154,6 +156,8 @@ const Video = () => {
           </ChannelDetail>
           <Subscribe>SUBSCRIBE</Subscribe>
         </Channel>
+        <Hr/>
+        <Comments/>
       </Content>
       <Recommendation>Recommendation</Recommendation>
     </Container>
