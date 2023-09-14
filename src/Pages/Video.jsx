@@ -61,6 +61,8 @@ const Subscribe = styled.button`
   border : none;
   border-radius : 3px;
   height : max-content;
+  padding : 10px 20px;
+  cursor : pointer;
 `;
 
 const Image = styled.img`
