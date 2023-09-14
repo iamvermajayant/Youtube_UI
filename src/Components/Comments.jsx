@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Comment from "./Comment";
 
 const Container = styled.div``;
 
@@ -31,6 +32,14 @@ const Comments = () => {
         <Avatar src="https://yt3.googleusercontent.com/ytc/AOPolaSAz3nhUeo5D7ps5MvLjQsCeqdLlB7Yz-MotQLeJA=s176-c-k-c0x00ffffff-no-rj" />
         <Input placeholder="Add a comment..." />
       </NewComment>
+      <Comment/>
+      <Comment/>
+      <Comment/>
+      <Comment/>
+      <Comment/>
+      <Comment/>
+      <Comment/>
+      <Comment/>
     </Container>
   );
 };
