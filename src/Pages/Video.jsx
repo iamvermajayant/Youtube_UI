@@ -3,6 +3,8 @@ import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
 import styled from "styled-components";
 import Comments from "../Components/Comments";
+import Card from '../Components/Card';
+
 
 const Container = styled.div`
   display: flex;
@@ -13,7 +15,10 @@ const Content = styled.div`
   flex: 5;
 `;
 
-const VideoWrapper = styled.div``;
+const VideoWrapper = styled.div`
+`;
+
+
 
 const Title = styled.h1`
   font-size: 18px;
@@ -106,6 +111,7 @@ const Video = () => {
       <Content>
         <VideoWrapper>
           <iframe
+            style={{borderRadius : "15px"}}
             width="100%"
             height="720"
             src="https://www.youtube.com/embed/mZQH8CPQ-wo?si=V6uZw0Ah9ktp3EX7"
@@ -159,7 +165,22 @@ const Video = () => {
         <Hr/>
         <Comments/>
       </Content>
-      <Recommendation>Recommendation</Recommendation>
+      <Recommendation>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+      </Recommendation>
     </Container>
   );
 };
