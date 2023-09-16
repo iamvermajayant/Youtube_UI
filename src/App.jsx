@@ -9,6 +9,7 @@ import { darkTheme, lightTheme } from "./utils/Theme";
 import { useState } from "react";
 import Home from "./Pages/Home";
 import Video from "./Pages/Video";
+import SignIn from "./Pages/SignIn";
 
 
 const Container = styled.div`
@@ -41,6 +42,7 @@ function App() {
                   <Route path ="/video">
                     <Route path=":id" element={<Video/>} />
                   </Route>
+                  <Route path="/signin" element={<SignIn/>} />
                 </Route>
               </Routes>
             </Wrapper>
