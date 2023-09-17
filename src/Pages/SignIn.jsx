@@ -50,8 +50,8 @@ const Button = styled.button`
 
 const More = styled.div`
   display : flex;
-  font-size : 10px;
-  
+  font-size : 12px;
+  margin-top : 10px;
 `;
 
 const Links = styled.div`
