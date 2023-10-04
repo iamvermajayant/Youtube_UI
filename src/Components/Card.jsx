@@ -1,6 +1,9 @@
-
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import PropTypes from 'prop-types';
+
+
+
 
 const Container = styled.div`
   width: ${(props)=> props.type !== "sm" && "360px"};
@@ -54,22 +57,35 @@ const Info = styled.div`
   color: ${({ theme }) => theme.textSoft};
 `;
 
-const Card = ({type}) => {
+const Card = ({type, video}) => {
   return (
     <Link to="/video/test" style={{textDecoration : "none"}}>
     <Container type={type}>
-      <Image type={type} src="https://i.ytimg.com/vi/mZQH8CPQ-wo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBfAQkZobpHNdCTehIhLbef0N9thA" />
+      <Image type={type} src={video.imgUrl} />
       <Details type={type}>
-        <ChannelImage type={type} src="https://yt3.ggpht.com/ytc/AOPolaSAz3nhUeo5D7ps5MvLjQsCeqdLlB7Yz-MotQLeJA=s68-c-k-c0x00ffffff-no-rj" />
+        <ChannelImage type={type} src={video.imgUrl} />
         <Texts>
-          <Title>Test Video</Title>
+          <Title>{video.title}</Title>
           <ChannelName>A.P Dhillon</ChannelName>
-          <Info>660,998 Views ● 1 Day ago</Info>
+          <Info>{video.views} Views ● 1 Day ago</Info>
         </Texts>
       </Details>
     </Container>
     </Link>
   );
 };
+
+
+Card.propTypes = {
+  type: PropTypes.string,
+  video: PropTypes.shape({
+    title: PropTypes.string,
+    imgUrl: PropTypes.string,
+    views : PropTypes.number,
+  })
+};
+
+
+
 
 export default Card;
